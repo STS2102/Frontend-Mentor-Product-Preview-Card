@@ -1,0 +1,162 @@
+:root {
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+    --font-paragraph: "Montserrat", sans-serif;
+    --font-title: "Fraunces", sans-serif;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Cream);
+    margin: 1rem;
+
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.Img-Box {
+    width: 100%;
+}
+
+.product-image {
+    max-width: 100%;
+  
+}
+
+.Card-Text {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.Product-Type {
+    font-size: 0.875rem;
+    color: var(--Grey);
+    font-family: var(--font-paragraph);
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    margin: 0rem;
+    padding: 0rem;
+
+}
+
+.Title {
+    font-size: 1.6rem;
+    color: var(--Black);
+    font-family: var(--font-title);
+    font-weight: 700;
+}
+
+.Description {
+    font-size: 0.875rem;
+    color: var(--Grey);
+    font-family: var(--font-paragraph);
+    font-weight: 500;
+}
+
+.Prices {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.New-Price {
+    font-size: 1.5rem;
+    color: var(--Green-500);
+    font-family: var(--font-title);
+    font-weight: 700;
+}
+
+.Old-Price {
+    font-size: 0.875rem;
+    color: var(--Grey);
+    font-family: var(--font-paragraph);
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.Add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Green-500);
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    border-radius: 0.6rem;
+    margin: 1rem 0.6rem 0rem 0.6rem;
+    gap: 0.5rem;
+}
+
+.Add-Text {
+    color: var(--White);
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: var(--font-paragraph);
+    
+}
+
+/* Responsive Design - Desktop Modification */
+
+@media (min-width: 24em) {
+    .Card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--White);
+    border-radius: 0.6rem;
+    overflow: hidden;
+    gap: 1rem;
+    max-width: 40rem;
+    }
+
+    .Img-Box {
+    flex: 1;
+    }
+    .Card-Text {
+    flex: 1;
+    justify-content: center;
+    padding: 2rem 1rem 2rem 1rem;
+    }
+
+    html {
+        font-size: 16px;
+    }
+
+    .Title {
+        font-size: clamp(1.5rem, 0.75rem + 5vw, 2.5rem);
+    }
+
+
+    .product-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    }
+
+}
+
+/* Hover */
+
+.Add:hover {
+    background-color: var(--Green-700);
+}
+
